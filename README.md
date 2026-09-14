@@ -2,15 +2,15 @@
 
 ## Overview
 
-it focuses on mastering html, css, and js professionally to reach a production-level code and structure where building a SaaS is possible.
+This project focuses on mastering html, css, and js professionally to reach a production-level code and structure where building a SaaS is possible. Its still under development so some css/js parts could come in the near future.
 
-* html is built as a clean and correct skeleton where its layout is easy to manipulate via css.
+* HTML is built as a clean, semantic skeleton where its layout is easy to manipulate via css.
 * Uses semantic HTML with relevant metadata for a solid foundation for accessibility interpretation
-* css file is neat, organized, and along best-practice and contains whatever primary needed skill in it to master.
+* CSS is neat, organized, and follows best practices.
 
 ## Learning Resources
 1. [HTML](https://www.youtube.com/watch?v=kUMe1FH4CHE) 
-2. CSS
+2. CSS - In progress
    
 ## Installation
 1. Clone this repository.
@@ -18,6 +18,6 @@ it focuses on mastering html, css, and js professionally to reach a production-l
 3. Open `index.html` with a local development server such as Live Server on VS code.
 
 
-## If you find a bug
-1. Submit a pull request
+## Feedback
+1. If you find a bug or have any suggestions, don't hesitate to submit a pull request. 
 
