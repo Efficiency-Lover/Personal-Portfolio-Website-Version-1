@@ -1,0 +1,12 @@
+
+html {
+    background-color: #333;
+    color: whitesmoke;
+}
+
+table, th, tr, td, caption {
+ border-color: whitesmoke;
+ border-style: solid;
+ border-width: 2px;
+ padding: 0.5rem;
+}
