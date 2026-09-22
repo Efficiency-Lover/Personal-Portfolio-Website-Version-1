@@ -4,55 +4,85 @@
   box-sizing: border-box;
 }
 
-html {
-  font-family: Arial, Helvetica, sans-serif;
-}
+/* || VARIABLES */
+:root {
+  /* || FONTS */
+  --FF: Arial, Helvetica, sans-serif;
 
-body {
-  background-color: papayawhip;
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  /* width: 100%; */
-}
-
-header {
-  background-color: rgb(214, 125, 73);
-  background-image: linear-gradient(
+  /* || COLORS */
+  --BODY-BGCOLOR: papayawhip;
+  --HEADER-BG-COLOR: rgb(214, 125, 73);
+  --HEADER-BG-IMAGE: linear-gradient(
     to bottom,
     rgba(0, 0, 0, 0.8),
     rgb(214, 125, 73)
   );
-  /* background-repeat: no-repeat;
-    /* background-size: cover; */
-  /* background-position: top;
-    background-size: cover; */
-  border-bottom: rgb(122, 75, 31) solid 10px;
-  padding: 1rem;
+  --H1-BGCOLOR: #000;
+  --H1-COLOR: whitesmoke;
+  --HEADER-P-COLOR: rgb(195, 85, 0);
+  --NAV-LINKS-COLOR: darkred;
+  /* --NAV-LINKS-VISITED-COLOR: purple;
+  --NAV-LINKS-ACTIVE-COLOR: black;
+  --NAV-LINKS-HOVER-COLOR: whitesmoke;
+  --NAV-LINKS-FOCUS-COLOR: black; */
+
+  /* || BOX MODEL */
+  --HEADER-BORDER-BOTTOM: rgb(122, 75, 31) solid 10px;
+  --PADDING: 1rem;
+  --BORDER-RADIUS: 5px;
+  --H1-PADDING: 1rem;
+  --HEADER-P-PADDING: 1rem 0.5rem;
+  --BLACK-BORDER: 2px solid black;
+  --NAV-LINKS-PADDING: 0.5rem 0.25rem;
+
+
+  
+  /* || FLEX AND GRID */
+  --HEADER-FLEX-GAP: 1rem;
+
+}
+
+html {
+  font-family: var(--FF);
+}
+
+body {
+  background-color: var(--BODY-BGCOLOR);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header {
+  background-color: var(--HEADER-BG-COLOR);
+  background-image: var(--HEADER-BG-IMAGE);
+
+  border-bottom: var(--HEADER-BORDER-BOTTOM);
+  padding: var(--PADDING);
 
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  gap: 1rem;
+  gap: var(--HEADER-FLEX-GAP);
 }
 
 header > h1 {
-  background-color: #000;
-  color: whitesmoke;
-  border-radius: 5px;
-  padding: 1rem;
+  background-color: var(--H1-BGCOLOR);
+  color: var(--H1-COLOR);
+  border-radius: var(--BORDER-RADIUS);
+  padding: var(--H1-PADDING);
 }
 
 header p {
-  border: 2px solid black;
-  border-radius: 5px;
-  padding: 1rem 0.5rem;
-  background: rgb(195, 85, 0);
+  border: var(--BLACK-BORDER);
+  border-radius: var(--BORDER-RADIUS);
+  padding: var(--HEADER-P-PADDING);
+  background: var(--HEADER-P-COLOR);
 }
 
 header nav {
-  border: 2px solid black;
-  border-radius: 5px;
+  border: var(--BLACK-BORDER);
+  border-radius: var(--BORDER-RADIUS);
   background-color: papayawhip;
 }
 
@@ -66,17 +96,17 @@ nav a {
   display: block;
   text-decoration: none;
   font-weight: bold;
-  color: darkred;
-  padding: 0.5rem 0.25rem;
-  border-bottom: 2px solid black;
+  color: var(--NAV-LINKS-COLOR);
+  padding: var(--NAV-LINKS-PADDING);
+  border-bottom: var(--BLACK-BORDER);
 }
 
 nav ul li:first-child a {
-  border-radius: 5px 5px 0 0;
+  border-radius: var(--BORDER-RADIUS) var(--BORDER-RADIUS) 0 0;
 }
 
 nav ul li:last-child a {
-  border-radius: 0 0 5px 5px;
+  border-radius: 0 0 var(--BORDER-RADIUS) var(--BORDER-RADIUS);
   border: none;
 }
 
@@ -96,7 +126,7 @@ nav a:active {
 }
 
 main {
-  padding: 1rem;
+  padding: var(--PADDING);
   display: flex;
   flex-direction: column;
   gap: 2rem;
@@ -104,8 +134,8 @@ main {
 }
 
 main section {
-  border: 2px solid black;
-  border-radius: 5px;
+  border: var(--BLACK-BORDER);
+  border-radius: var(--BORDER-RADIUS);
   padding: 1rem;
   display: flex;
   flex-direction: column;
@@ -123,8 +153,8 @@ main section {
   width: 35%;
   height: auto;
   aspect-ratio: 1/1;
-  border-radius: 5px;
-  border: 2px solid black;
+  border-radius: var(--BORDER-RADIUS);
+  border: var(--BLACK-BORDER);
 }
 
 .personal-details {
@@ -132,8 +162,8 @@ main section {
   flex-direction: column;
   gap: 0.5rem;
   justify-content: center;
-  border: 2px solid black;
-  border-radius: 5px;
+  border: var(--BLACK-BORDER);
+  border-radius: var(--BORDER-RADIUS);
   padding: 1rem;
   width: 100%;
 }
@@ -141,7 +171,7 @@ main section {
 .personal-details p {
   background-color: white;
   padding: 0.25rem;
-  border-radius: 5px;
+  border-radius: var(--BORDER-RADIUS);
 }
 
 .bold {
@@ -149,10 +179,10 @@ main section {
 }
 
 main h2 {
-  /* border-bottom: 2px solid black; */
+  /* border-bottom: var(--BLACK-BORDER); */
   background-color: white;
   padding: 0.25rem;
-  border-radius: 5px;
+  border-radius: var(--BORDER-RADIUS);
 }
 
 main section ol,
@@ -185,7 +215,7 @@ footer {
 
   justify-content: center;
   align-items: center;
-  padding: 1rem;
+  padding: var(--PADDING);
 }
 
 .grid-container {
@@ -245,9 +275,46 @@ caption,
 th,
 td {
   padding: 0.25rem 0.5rem;
-  border: 2px solid black;
+  border: var(--BLACK-BORDER);
 }
 
+/* animations */
+.hobbies img {
+    transition-property: transform;
+    transition-duration: 2s;
+}
+.hobbies img:hover {
+    transform: scale(2) /*rotate(360deg)*/;
+ 
+    
+}
+
+section dt {
+    border-radius: var(--BORDER-RADIUS);
+    animation-name: placesToVisit;
+    animation-duration: 3s;
+    animation-iteration-count: 5;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes placesToVisit {
+    0% {
+        background-color: transparent;
+    }
+    33% {
+        
+        background-color: darkgrey;
+        color: white;
+    }
+    66% {
+        background-color: black;
+        color: whitesmoke;
+    }
+    100% {
+        background-color: transparent;
+        color: black;
+    }
+}
 @media screen and (min-width: 320px) {
   html {
     font-size: 0.75rem;
@@ -257,5 +324,4 @@ td {
   html {
     font-size: 1rem;
   }
- 
 }
